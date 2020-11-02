@@ -1,36 +1,25 @@
 Scanner scan = new Scanner(System.in);
 		
+		char[][] Full_Name = new char[3][];
+		
 		System.out.print("How many characters is your first name : ");
 		int n = scan.nextInt();
-		char [] f_name = new char[n];
-		
-		for(int i=0; i<f_name.length; i++) {
-			char x = scan.next().charAt(0);
-			f_name[i] = x;
-		}
+		Full_Name[0] = new char[n];
 		
 		System.out.print("How many characters is your middle name : ");
-		int m =scan.nextInt();
-		char [] m_name = new char[m];
-		
-		for(int i=0; i<m_name.length; i++) {
-			char y = scan.next().charAt(0);
-			m_name[i] = y;
-		}
+		int m = scan.nextInt();
+		Full_Name[1] = new char[m];
 		
 		System.out.print("How many characters is your last name : ");
-		int l =scan.nextInt();
-		char [] l_name = new char[l];
+		int l = scan.nextInt();
+		Full_Name[2] = new char[l];	
+		System.out.println();
 		
-		for(int i=0; i<l_name.length; i++) {
-			char z = scan.next().charAt(0);
-			l_name[i] = z;
+		for(int i=0; i<Full_Name.length; i++) {
+			for(int j=0; j<Full_Name[i].length; j++) {
+				System.out.print("Position (" + i + "," + j + ") : ");
+				char x = scan.next().charAt(0);
+				Full_Name[i][j] = x;
+			}
+			System.out.println();
 		}
-		
-		char[][] letters = new char[3][]; 
-		
-		letters [0] = f_name;
-		letters [1] = m_name;
-		letters [2] = l_name;
-		
-		System.out.println(Arrays.deepToString(letters));
