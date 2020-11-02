@@ -1,0 +1,31 @@
+	Scanner scan = new Scanner(System.in);
+		
+		System.out.print("How many characters is your first name : ");
+		int n = scan.nextInt();
+		char [] f_name = new char[n];
+		
+		for(int i=0; i<f_name.length; i++) {
+			char x = scan.next().charAt(0);
+			f_name[i] = x;
+		}
+		String F_name = String.copyValueOf(f_name);
+		
+		System.out.print("How many characters is your middle name : ");
+		int m =scan.nextInt();
+		char [] m_name = new char[m];
+		
+		for(int i=0; i<m_name.length; i++) {
+			char y = scan.next().charAt(0);
+			m_name[i] = y;
+		}
+		String M_name = String.copyValueOf(m_name);
+		
+		System.out.print("How many characters is your last name : ");
+		int l =scan.nextInt();
+		char [] l_name = new char[l];
+		
+		for(int i=0; i<l_name.length; i++) {
+			char z = scan.next().charAt(0);
+			l_name[i] = z;
+		}
+		String L_name = String.copyValueOf(l_name);
