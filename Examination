@@ -1,4 +1,4 @@
-	Scanner scan = new Scanner(System.in);
+Scanner scan = new Scanner(System.in);
 		
 		System.out.print("How many characters is your first name : ");
 		int n = scan.nextInt();
@@ -8,7 +8,6 @@
 			char x = scan.next().charAt(0);
 			f_name[i] = x;
 		}
-		String F_name = String.copyValueOf(f_name);
 		
 		System.out.print("How many characters is your middle name : ");
 		int m =scan.nextInt();
@@ -18,7 +17,6 @@
 			char y = scan.next().charAt(0);
 			m_name[i] = y;
 		}
-		String M_name = String.copyValueOf(m_name);
 		
 		System.out.print("How many characters is your last name : ");
 		int l =scan.nextInt();
@@ -28,4 +26,11 @@
 			char z = scan.next().charAt(0);
 			l_name[i] = z;
 		}
-		String L_name = String.copyValueOf(l_name);
+		
+		char[][] letters = new char[3][]; 
+		
+		letters [0] = f_name;
+		letters [1] = m_name;
+		letters [2] = l_name;
+		
+		System.out.println(Arrays.deepToString(letters));
